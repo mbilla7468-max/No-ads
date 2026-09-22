@@ -1,0 +1,6 @@
+{
+  "name": "No Ads",
+  "description": "Ultra-lightweight ad blocking and privacy control dashboard for installed apps and games.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
