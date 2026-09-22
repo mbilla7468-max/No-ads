@@ -17,10 +17,11 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
 
-    - name: Setup Gradle and Wrapper
-      uses: gradle/actions/setup-gradle@v3
-      with:
-        gradle-version: wrapper
+    - name: Install Gradle and Generate Wrapper
+      run: |
+        sudo apt-get update && sudo apt-get install -y gradle
+        gradle wrapper
+        chmod +x gradlew
 
     - name: Build Debug APK
       run: ./gradlew assembleDebug
@@ -30,4 +31,3 @@ jobs:
       with:
         name: app-debug
         path: app/build/outputs/apk/debug/app-debug.apk
-        
